@@ -12,9 +12,8 @@ export default makeStyles( (theme) => ({
   },
 
   brandLogo: {
-    height: "75px",
-    width: "75px",
-    backgroundColor: "white"
+    height: "25%",
+    width: "25%",
   },
 
   navLinks: {

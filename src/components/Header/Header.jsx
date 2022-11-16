@@ -1,6 +1,10 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
+// Assets
+import { Logo4 as BrandLogo } from '../../assets';
+
+// Stylings
 import useStyles from './styles'
 
 const Header = () => {
@@ -8,9 +12,9 @@ const Header = () => {
   
   return (
     <div className={classes.navBar}>
-      <div className={classes.brandLogo}>
-        
-      </div>
+      <Link to="/">
+        <img src={BrandLogo} className={classes.brandLogo} />
+      </Link>
 
       <div className={classes.navLinks}>
         <NavLink
