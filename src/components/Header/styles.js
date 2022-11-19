@@ -16,13 +16,36 @@ export default makeStyles( (theme) => ({
     width: "25%",
   },
 
+  backdrop: {
+    display: 'flex',
+    width: '20%',
+    height: '45%',
+
+    "@media (max-width: 1023px)": {
+      position: 'absolute',
+      top: '0',
+      height: '99%',
+      width: '95%',
+      display: 'none',
+      backgroundColor: 'rgba(33, 30, 30, .8)',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }
+  },
+
   navLinks: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "20%",
-    height: "45%",
-    // marginRight: "10%"
+    width: "100%",
+    height: "100%",
+    // marginRight: "10%",
+
+    "@media (max-width: 1023px)": {
+      flexDirection: "column",
+      width: '50%',
+      height: '30%',
+    },
   },
 
   navLinkItem: {
@@ -35,6 +58,11 @@ export default makeStyles( (theme) => ({
     overflow: 'hidden',
     position: 'relative',
     transition: 'all 0.5s ease-in-out',
+    
+    "@media (max-width: 1023px)": {
+      fontSize: '24px',
+      height: 'initial',
+    },
 
     '&:after': {
       content: '""',
@@ -45,7 +73,7 @@ export default makeStyles( (theme) => ({
       left: '0',
       borderRadius: '30px',
       backgroundColor: 'white',
-      transform: 'translateX(-100%)',
+      transform: 'translateX(-150%)',
       transition: 'all 0.5s ease-in-out',
     },
 
