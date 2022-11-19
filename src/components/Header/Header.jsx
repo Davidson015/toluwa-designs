@@ -39,7 +39,7 @@ const Header = () => {
   const classes = useStyles();
   const isMobile = useMediaQuery('(max-width: 1023px)');
   
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     let menu = document.querySelector(`.${classes.backdrop}`).classList;
@@ -58,7 +58,7 @@ const Header = () => {
       </Link>
 
       {
-        isOpen ? (
+        !isOpen ? (
           <Menu
             sx={{
               zIndex: '1',
