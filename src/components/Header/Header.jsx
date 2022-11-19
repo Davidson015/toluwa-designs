@@ -45,6 +45,12 @@ const Header = () => {
     let menu = document.querySelector(`.${classes.backdrop}`).classList;
     menu.toggle('toggleMenu');
 
+    if (!isMobile && menu.contains('toggleMenu')) {
+      menu.remove('toggleMenu');
+    } // else if (isMobile && !isOpen) {
+    //   menu.remove('toggleMenu');
+    // }
+
   }, [isOpen, isMobile]);
   
   const handleMenuToggle = () => {
