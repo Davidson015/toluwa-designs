@@ -26,7 +26,6 @@ export default makeStyles( (theme) => ({
       top: '0',
       height: '99%',
       width: '95%',
-      display: 'none',
       backgroundColor: 'rgba(33, 30, 30, .8)',
       justifyContent: 'center',
       alignItems: 'center',

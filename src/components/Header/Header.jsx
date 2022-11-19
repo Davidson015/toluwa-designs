@@ -43,7 +43,7 @@ const Header = () => {
 
   useEffect(() => {
     let menu = document.querySelector(`.${classes.backdrop}`).classList;
-    menu.toggle('openMenu');
+    menu.toggle('toggleMenu');
 
   }, [isOpen, isMobile]);
   
