@@ -9,7 +9,7 @@ export default makeStyles( (theme) => ({
     display: "flex",
     justifyContent: 'space-between',
     alignItems: 'center',
-    position: 'fixed',
+    position: 'sticky',
     top: '0',
     zIndex: '1000',
   },
