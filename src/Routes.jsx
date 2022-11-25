@@ -9,13 +9,13 @@ const Routes = ({ location }) => {
       <Route
         exact
         path='/'
-        component={Home}
+        element={<Home />}
       />
 
       {/* <Route
         exact
         path={`/${}`}
-        component={}
+        element={}
       /> */}
     </DOMRoutes>
   )
