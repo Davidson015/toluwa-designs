@@ -1,8 +1,30 @@
-import React from 'react'
+import React from 'react';
 
-const Project = () => {
+// @mui components
+import Grid from '@mui/material/Unstable_Grid2';
+
+// Stylings
+import useStyles from './styles';
+
+const Project = ({ projectImg, projectLink, altTxt }) => {
+  const classes = useStyles();
+
   return (
-    <div>Project</div>
+    <Grid
+      xs={12}
+      md={4}
+      sx={{
+        overflow: 'hidden'
+      }}
+    >
+      <a href={projectLink}>
+        <img
+          className={classes.projectImg}
+          src={projectImg}
+          alt={altTxt}
+        />
+      </a>
+    </Grid>
   )
 }
 
