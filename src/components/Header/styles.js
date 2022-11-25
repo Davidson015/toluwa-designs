@@ -9,6 +9,9 @@ export default makeStyles( (theme) => ({
     display: "flex",
     justifyContent: 'space-between',
     alignItems: 'center',
+    position: 'fixed',
+    top: '0',
+    zIndex: '1000',
   },
 
   brandLogo: {
@@ -22,10 +25,10 @@ export default makeStyles( (theme) => ({
     height: '45%',
 
     "@media (max-width: 1023px)": {
-      position: 'absolute',
+      position: 'fixed',
       top: '0',
-      height: '99%',
-      width: '95%',
+      height: '100%',
+      width: '100%',
       backgroundColor: 'rgba(33, 30, 30, .8)',
       justifyContent: 'center',
       alignItems: 'center',
