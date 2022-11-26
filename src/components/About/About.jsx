@@ -3,37 +3,21 @@ import React from 'react'
 // @mui components
 import Grid from '@mui/material/Unstable_Grid2';
 import { Typography, Container, Box } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { KeyboardArrowRight as Arrow } from '@mui/icons-material';
 
 // assets
 import { ProfileImg } from '../../assets';
+import theme from '../../assets/theme';
 
 // Stylings
 import useStyles from './styles';
 
-const theme = createTheme({
-  typography: {
-    fontFamily: [
-      "Armata",
-      '-apple-system',
-      'BlinkMacSystemFont',
-      'Segoe UI',
-      'Roboto', 'Oxygen',
-      'Ubuntu',
-      'Cantarell',
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
-      'sans-serif'
-    ].join(','),
-    subtitle1: {
-      color: '#eaeaea',
-      fontSize: '.95rem',
-      fontWeight: '400',
-    }
-  },
-});
+theme.typography.subtitle1 = {
+  color: '#eaeaea',
+  fontSize: '.95rem',
+  fontWeight: '400',
+};
 
 theme.typography.subtitle2 = {
   color: '#eaeaea',
@@ -58,36 +42,36 @@ const About = () => {
   const classes = useStyles();
 
   return (
-    <Container
-      className={classes.container}
-      sx={{
-        [theme.breakpoints.down('sm')]: {
-          padding: '0 !important',
-        },
-      }}
-    >
-      <Grid
-        container
-        columnSpacing={{ xs: 0, md:8 }}
-        rowSpacing={{ xs: 5, md: 0 }}
+    <ThemeProvider theme={theme}>
+      <Container
+        className={classes.container}
+        sx={{
+          [theme.breakpoints.down('sm')]: {
+            padding: '0 !important',
+          },
+        }}
       >
         <Grid
-          xs={12}
-          md={6}
+          container
+          columnSpacing={{ xs: 0, md:8 }}
+          rowSpacing={{ xs: 5, md: 0 }}
         >
-          <img
-            className={classes.profileImg}
-            src={ProfileImg}
-            alt="profile img"
-          />
-        </Grid>
+          <Grid
+            xs={12}
+            md={6}
+          >
+            <img
+              className={classes.profileImg}
+              src={ProfileImg}
+              alt="profile img"
+            />
+          </Grid>
 
-        <Grid
-          xs={12}
-          md={6}
-        >
-          <div className={classes.detailBox}>
-            <ThemeProvider theme={theme}>
+          <Grid
+            xs={12}
+            md={6}
+          >
+            <div className={classes.detailBox}>
               <Typography variant="subtitle2" gutterBottom>
                 Available for small freelance projects.
               </Typography>
@@ -132,11 +116,11 @@ const About = () => {
                   Contact Me
                 </Box>
               </a>
-            </ThemeProvider>
-          </div>
+            </div>
+          </Grid>
         </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </ThemeProvider>
   )
 }
 

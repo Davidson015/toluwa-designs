@@ -3,29 +3,12 @@ import React from 'react';
 // @mui components
 import { Container, Box, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { LinkedIn, GitHub } from '@mui/icons-material';
 
 // Stylings
 import useStyles from './styles';
-
-const theme = createTheme({
-  typography: {
-    fontFamily: [
-      "Montserrat",
-      '-apple-system',
-      'BlinkMacSystemFont',
-      'Segoe UI',
-      'Roboto', 'Oxygen',
-      'Ubuntu',
-      'Cantarell',
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
-      'sans-serif'
-    ].join(','),
-  },
-});
+import theme from '../../assets/theme';
 
 theme.typography.body1 = {
   color: '#A9A9A9',
