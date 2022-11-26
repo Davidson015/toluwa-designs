@@ -4,7 +4,7 @@ import React from 'react'
 import Grid from '@mui/material/Unstable_Grid2';
 
 // Stylings
-import useStyles from './styles';
+// import useStyles from './styles';
 
 // assets
 import { projects } from '../../assets';
@@ -23,6 +23,7 @@ const Projects = () => {
       {
         projects.map( (project, key) => (
           <Project
+            key={key}
             projectImg={project}
             projectLink="#"
             altText="altText"

@@ -1,10 +1,10 @@
 import React from 'react';
 
 // @mui components
-import { Container, Grid2 as Grid } from '@mui/material';
+import { Container } from '@mui/material';
 
 // Stylings
-import useStyles from './styles';
+// import useStyles from './styles';
 
 import { Projects, About, Skills } from '../index'
 
