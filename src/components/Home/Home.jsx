@@ -6,12 +6,13 @@ import { Container, Grid2 as Grid } from '@mui/material';
 // Stylings
 import useStyles from './styles';
 
-import { Projects } from '../index'
+import { Projects, About } from '../index'
 
 const Home = () => {
   return (
     <Container>
       <Projects />
+      <About />
     </Container>
   )
 }

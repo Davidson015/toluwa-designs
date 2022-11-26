@@ -10,6 +10,8 @@ import p4 from './images/projectImages/bSpoke.jpg';
 import p5 from './images/projectImages/paychex.jpg';
 import p6 from './images/projectImages/logos.jpg';
 
+import ProfileImg from './images/Profile.jpg';
+
 const projects = [p1, p2, p3, p4, p5, p6];
 
-export { Logo1, Logo2, Logo3, Logo4, projects };
+export { Logo1, Logo2, Logo3, Logo4, projects, ProfileImg };
