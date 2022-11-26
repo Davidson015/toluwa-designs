@@ -32,7 +32,7 @@ const BackToTop = () => {
           zIndex: '1000',
 
           "@media (max-width: 1023px)": {
-           bottom: '30%',
+           bottom: 180,
           },
       }}
       >
