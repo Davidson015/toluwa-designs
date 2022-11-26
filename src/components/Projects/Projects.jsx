@@ -16,7 +16,9 @@ const Projects = () => {
     <Grid
       container
       spacing={0}
-      sx={{}}
+      sx={{
+        margin: '2% 0 9% 0',
+      }}
     >
       {
         projects.map( (project, key) => (
