@@ -25,7 +25,16 @@ const BackToTop = () => {
       <Box
         onClick={handleClick}
         role="presentation"
-        sx={{ position: 'fixed', bottom: '12%', right: 20, zIndex: '1000' }}
+        sx={{
+          position: 'fixed',
+          bottom: '12%',
+          right: 20,
+          zIndex: '1000',
+
+          "@media (max-width: 1023px)": {
+           bottom: '30%',
+          },
+      }}
       >
         <Fab
           size="small"
