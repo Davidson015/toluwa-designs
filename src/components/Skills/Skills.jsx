@@ -64,7 +64,12 @@ const Skills = () => {
   
   return (
     <ThemeProvider theme={theme}>
-      <Container>
+      <Container
+        sx={{
+          padding: '0 !important',
+          margin: '20% 0 10%',
+        }}
+      >
         <Typography variant='h2'>
           What I Do
         </Typography>
